@@ -69,11 +69,11 @@ th {
 
 th {
 	font-weight: bold;
+	background-color: silver;
 }
 
 label {
 	font-weight: bold;
-
 	display: block;
 	margin-bottom: 0.2em;
 }
@@ -160,4 +160,23 @@ button:disabled {
 #mensagens-erro {
 	background-color: red;
 	font-weight: bold;
+}
+
+.info-nome {
+	cursor: pointer;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5;
+}
+
+.invisivel{
+	display: none;
+}
+
+#filtrar-tabela {
+	width: 200px;
+	height: 35px;
+	margin-bottom: 10px;
 }

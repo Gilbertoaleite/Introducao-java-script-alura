@@ -18,15 +18,17 @@
 			<div>
 				<button class="botao bto-principal" id="btn-escuro">Tema escuro</button>
 			</div>
-			<!-- <input
-				id="finder"
-				type="text"
-				placeholder="digite o nome do paciente.."
-			/> -->
 		</header>
 		<main>
 			<section class="container modoDark">
 				<h2 id="subTitulo">Meus pacientes</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input
+					id="filtrar-tabela"
+					type="text"
+					name="filtro"
+					placeholder="Digite o nome do paciente.."
+				/>
 				<table>
 					<thead>
 						<tr>
@@ -83,10 +85,7 @@
 		</main>
 		<section class="container">
 			<h2 id="titulo-form">Adicionar novo paciente</h2>
-			<ul id="mensagens-erro">
-
-				
-			</ul>
+			<ul id="mensagens-erro"></ul>
 			<form id="form-adiciona">
 				<div class="grupo">
 					<label for="nome">Nome:</label>
@@ -136,5 +135,7 @@
 
 		<script src="./js/calcula-imc.js"></script>
 		<script src="./js/form.js"></script>
+		<script src="./js/remover-paciente.js"></script>
+		<script src="./js/filtrar.js"></script>
 	</body>
 </html>

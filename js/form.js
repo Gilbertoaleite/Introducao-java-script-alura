@@ -87,6 +87,8 @@ function validaPaciente(paciente) {
 	return erros;
 }
 
+
+
 // var pesoTd = document.createElement('td');
 // pesoTd.classList.add('info-peso');
 // var alturaTd = document.createElement('td');
