@@ -9,6 +9,10 @@ body {
 	font-size: 14px;
 }
 
+#titulo-form{
+	margin-top: 30px;
+}
+
 header {
 	background-color: #333;
 	height: 3em;
@@ -114,7 +118,6 @@ button {
 	border-bottom: 3px solid;
 	font-size: 1.2em;
 	cursor: pointer;
-	margin: 0;
 	margin-top: -3px;
 	color: #fff;
 	background-color: #0c8cd3;
@@ -122,13 +125,19 @@ button {
 	width: 20%;
 	display: block;
 	clear: both;
-	margin: 10px 0px;
+	margin: 20px 10px 10px ;
+	
+
+	
 }
 
-button:active {
-	margin-top: 0px;
-	border: 0;
-}
+ button:hover {
+	background-color:#00cfff;
+	transform: scale(1.1);
+	
+	
+	
+} 
 
 button[disabled='disabled'],
 button:disabled {
