@@ -15,6 +15,11 @@ botaoAdicionar.addEventListener('click', function (event)
 		return;
 	}
 
+	adicionaPacienteNaTabela(paciente);
+
+	
+	form.reset();
+	
 	if (!validaPaciente(paciente)) {
 		console.log('Paciente invalido');
 		return; // o return vazio nao adiciona na tabela
@@ -22,8 +27,8 @@ botaoAdicionar.addEventListener('click', function (event)
 
 	var tabela = document.querySelector('#tabela-pacientes');
 	tabela.appendChild(pacienteTr);
-	form.reset();
 
+	
 	var mensagensErro = document.querySelector('#mensagens-erro');
 	mensagensErro.innerHTML = "";
 });
@@ -86,6 +91,15 @@ function validaPaciente(paciente) {
 
 	return erros;
 }
+
+//funçao para buscar os paciente via api ultilizando o modo ajax
+
+	function adicionaPacienteNaTabela(paciente) {
+		var pacienteTr = montaTr(paciente);
+		var tabela = document.querySelector('#tabela-pacientes');
+		tabela.appendChild(pacienteTr);
+	}
+
 
 
 

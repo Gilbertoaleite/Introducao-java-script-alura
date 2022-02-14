@@ -6,8 +6,25 @@ botaoAdicionar.addEventListener('click', function () {
    xhr.open('GET', 'http://api-pacientes.herokuapp.com/pacientes');
 
    xhr.addEventListener("load", function () {
-      console.log(xhr.responseText);
-   });
-
-   xhr.send();
+      if ((xhr.status == 200)) {
+      var response = xhr.responseText;
+      var pacientes = JSON.parse(response); //parseado os dando
+      
+      pacientes.forEach(function (paciente) {
+         adicionaPacienteNaTabela(paciente);
+      });
+         console.log(this.responseText);
+      } else {
+         console.log(xhr.status);
+         console.log(xhr.responseText);
+         var erroAjax = document.querySelector('#erro-ajax');
+         erroAjax.classList.remove("invisivel");
+      
+   }
+			
+      });
+      xhr.send();
 });
+
+
+
